@@ -143,7 +143,7 @@ resource "aws_api_gateway_integration" "accessibility_request" {
   http_method = aws_api_gateway_method.accessibility_request_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.accessibilityRequest_Website_Dev.arn
+  uri         = aws_lambda_function.accessibilityRequest_Website_Dev.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "search_ancillary" {
@@ -152,7 +152,7 @@ resource "aws_api_gateway_integration" "search_ancillary" {
   http_method = aws_api_gateway_method.search_ancillary_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.ancillarySearch.arn
+  uri         = aws_lambda_function.ancillarySearch.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "baggage" {
@@ -161,7 +161,7 @@ resource "aws_api_gateway_integration" "baggage" {
   http_method = aws_api_gateway_method.baggage_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.baggage.arn
+  uri         = aws_lambda_function.baggage.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "create_reservation" {
@@ -170,7 +170,7 @@ resource "aws_api_gateway_integration" "create_reservation" {
   http_method = aws_api_gateway_method.create_reservation_post.http_method
   integration_http_method = "POST"
   type        = "HTTP"
-  uri         = aws_lambda_function.createReservation_Web_Dev.arn
+  uri         = aws_lambda_function.createReservation_Web_Dev.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "flight_select" {
@@ -179,7 +179,7 @@ resource "aws_api_gateway_integration" "flight_select" {
   http_method = aws_api_gateway_method.flight_select_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.flightSelection_dev_Web.arn
+  uri         = aws_lambda_function.flightSelection_dev_Web.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "low_fares" {
@@ -188,7 +188,7 @@ resource "aws_api_gateway_integration" "low_fares" {
   http_method = aws_api_gateway_method.low_fares_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.lowFareoptions_Dev_Website.arn
+  uri         = aws_lambda_function.lowFareoptions_Dev_Website.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "payment_methods" {
@@ -197,7 +197,7 @@ resource "aws_api_gateway_integration" "payment_methods" {
   http_method = aws_api_gateway_method.payment_methods_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.paymenthMethods.arn
+  uri         = aws_lambda_function.paymenthMethods.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "payment_reservation" {
@@ -206,7 +206,7 @@ resource "aws_api_gateway_integration" "payment_reservation" {
   http_method = aws_api_gateway_method.payment_reservation_post.http_method
   integration_http_method = "POST"
   type        = "HTTP"
-  uri         = aws_lambda_function.reservationPaymentTransaction_dev_IHW.arn
+  uri         = aws_lambda_function.reservationPaymentTransaction_dev_IHW.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "seat_selection" {
@@ -215,7 +215,7 @@ resource "aws_api_gateway_integration" "seat_selection" {
   http_method = aws_api_gateway_method.seat_selection_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.seatSealection.arn
+  uri         = aws_lambda_function.seatSealection.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "voucher_code" {
@@ -224,7 +224,7 @@ resource "aws_api_gateway_integration" "voucher_code" {
   http_method = aws_api_gateway_method.voucher_code_get.http_method
   integration_http_method = "GET"
   type        = "HTTP"
-  uri         = aws_lambda_function.voucherCode.arn
+  uri         = aws_lambda_function.voucherCode.invoke_arn
 }
 
 # Create API Gateway deployment
