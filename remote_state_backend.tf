@@ -51,12 +51,12 @@
 #   hash_key = "LockID"
 # }
 
-# terraform {
-#   backend "s3" {
-#     bucket         = "terraform-state-bucket-inhouse-website-api-ad"
-#     key            = "state/statefile.tfstate"
-#     region         = "ca-central-1"
-#     encrypt        = true
-#     dynamodb_table = "terraform-state-locks-inhouse-website-api-AD"
-#   }
-# }
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-bucket-inhouse-website-api-ad"
+    key            = "state/statefile.tfstate"
+    region         = "ca-central-1"
+    encrypt        = true
+    dynamodb_table = "terraform-state-locks-inhouse-website-api-AD"
+  }
+}
