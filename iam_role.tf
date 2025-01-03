@@ -1,6 +1,6 @@
 # Define the IAM Role
 resource "aws_iam_role" "jwt_token_role" {
-  name = "JWTtoken_Website_Dev-role"
+  name = "JWTtoken_Website_Dev-role-AD"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
