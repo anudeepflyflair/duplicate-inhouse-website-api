@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "lambda_layer_bucket" {
-  bucket              = "lamdazipfilesforwenbsitedevaccount-AD"
+  bucket              = "lamdazipfilesforwenbsitedevaccount-ad"
 #   acl                 = "private"
   force_destroy       = true
   object_lock_enabled = false
