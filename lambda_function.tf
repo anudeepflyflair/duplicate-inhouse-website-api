@@ -167,3 +167,18 @@ resource "aws_lambda_function" "voucherCode" {
      aws_lambda_layer_version.lambda_layer.arn
     ]
 }
+
+
+resource "aws_lambda_function" "Website_Dev_LamdaAuthoriser" {
+  filename                           = "./lambda_function_files/Website_Dev_LamdaAuthoriser.zip"
+  source_code_hash                   = filebase64sha256("./lambda_function_files/Website_Dev_LamdaAuthoriser.zip")
+  function_name                      = "Website_Dev_LamdaAuthoriser-AD"
+  handler                            = "lambda_function.lambda_handler"
+  role                               = aws_iam_role.jwt_token_role.arn
+  runtime                            = "python3.11"
+  timeout                            = 10
+
+  layers = [
+     aws_lambda_layer_version.lambda_layer.arn
+    ]
+}
