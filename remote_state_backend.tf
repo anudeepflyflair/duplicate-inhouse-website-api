@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform-state-bucket-inhouse-website-api-AD"
+  bucket = "terraform-state-bucket-inhouse-website-api-ad"
 }
 
 resource "aws_s3_bucket_versioning" "terraform_state_versioning" {
