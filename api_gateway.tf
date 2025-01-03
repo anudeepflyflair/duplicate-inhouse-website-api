@@ -69,7 +69,7 @@ resource "aws_api_gateway_resource" "voucher_code" {
 resource "aws_api_gateway_authorizer" "custom_authorizer" {
   name               = "CustomLambdaAuthorizer-AD"
   rest_api_id        = aws_api_gateway_rest_api.website_dev.id
-  authorizer_uri     = aws_lambda_function.lambda_authorizer.invoke_arn
+  authorizer_uri     = aws_lambda_function.Website_Dev_LamdaAuthoriser.invoke_arn
   identity_source    = "method.request.header.Authorization"
   type               = "REQUEST"
 }
